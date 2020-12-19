@@ -290,6 +290,7 @@ module Rails
 
       def rails_gemfile_entry
         if options.dev?
+          puts Rails::Generators::RAILS_DEV_PATH
           [
             GemfileEntry.path("rails", Rails::Generators::RAILS_DEV_PATH)
           ]
