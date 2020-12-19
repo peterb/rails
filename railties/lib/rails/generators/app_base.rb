@@ -291,6 +291,7 @@ module Rails
       def rails_gemfile_entry
         if options.dev?
           puts Rails::Generators::RAILS_DEV_PATH
+          raise 'Finished debugging, stopping here!'
           [
             GemfileEntry.path("rails", Rails::Generators::RAILS_DEV_PATH)
           ]
